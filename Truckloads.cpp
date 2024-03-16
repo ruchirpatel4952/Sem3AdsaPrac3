@@ -11,10 +11,3 @@ int Truckloads::numTrucks(int numCrates, int loadSize) {
     return numTrucks(firstHalf, loadSize) + numTrucks(secondHalf, loadSize); 
 }
 
-int main() {
-    Truckloads truckloads;
-    std::cout << truckloads.numTrucks(14, 3) << std::endl; 
-    std::cout << truckloads.numTrucks(15, 1) << std::endl; 
-    std::cout << truckloads.numTrucks(1024, 5) << std::endl; 
-    return 0;
-}
