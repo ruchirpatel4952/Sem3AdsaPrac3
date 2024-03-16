@@ -2,22 +2,22 @@
 #include <string>
 
 int Reverser::reverseDigit(int value) {
-    if (value < 0) return -1; // Error indicator for invalid input
+    if (value < 0) return -1; 
     
-    if (value < 10) return value; // Base case, single digit number
+    if (value < 10) return value; 
     
     int lastDigit = value % 10;
     int remainingDigits = value / 10;
     
-    int reversed = reverseDigit(remainingDigits); // Recursively reverse remaining digits
+    int reversed = reverseDigit(remainingDigits);
     return lastDigit * pow(10, std::to_string(reversed).length()) + reversed;
 }
 
 std::string Reverser::reverseString(std::string characters) {
-    if (characters.empty()) return ""; // Base case, empty string
+    if (characters.empty()) return ""; 
     
     char lastChar = characters.back();
     characters.pop_back();
     
-    return lastChar + reverseString(characters); // Recursively reverse remaining characters
+    return lastChar + reverseString(characters);
 }
